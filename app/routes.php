@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::match(array('GET', 'POST'), '/{domaine}', 'ApiController@links')->where('domaine', '[\s\S]*');
